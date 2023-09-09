@@ -2,6 +2,7 @@ import sendRequest from "./send-request";
 const BASE_URL = '/api/poems';
 
 export function index() {
+    console.log('beforesend');
     return sendRequest(BASE_URL);
 }
 

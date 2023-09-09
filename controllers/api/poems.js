@@ -1,4 +1,4 @@
-const User = require('../..models/user');
+const User = require('../../models/user');
 const Poem = require('../../models/poem');
 
 module.exports = {
