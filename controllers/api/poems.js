@@ -11,6 +11,7 @@ module.exports = {
 async function create(req, res) {
     try {
         const newPoem = {
+            title: req.body.params,
             text: req.body.newPoem,
             user: req.user._id
         };

@@ -9,12 +9,10 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/orders">All Poems</Link>
-      &nbsp; | &nbsp;
-      <Link to="/">New Poem</Link>
-      &nbsp;&nbsp;
-      <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
-    </nav>
-  );
+    <span className="title">Poem Book</span>
+    <span>Welcome, {user.name}</span>
+    &nbsp;&nbsp;
+    <Link className="logout" to="" onClick={handleLogOut}>Log Out</Link>
+  </nav>
+);
 }

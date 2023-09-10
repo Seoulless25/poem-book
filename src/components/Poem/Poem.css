@@ -1,0 +1,51 @@
+.poem-container {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 1.3rem 0;
+    background-color: var(--tan-1);
+    border: .5rem solid var(--tan-3);
+    border-radius: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .poem-container input {
+    width: 250vmin;
+  }
+  
+  .poem-date {
+    font-size: 10px;
+    color: gray;
+  }
+  
+  .delete-poem {
+    position: absolute;
+    right: 70px;
+    font-size: 14px;
+  }
+  
+  .delete-poem:hover, .edit-poem:hover {
+    transform: scale(1.1);
+  }
+  
+  .delete-poem:active, .edit-poem:active  {
+    background-color: rgb(28, 28, 28);
+  }
+  
+  .edit-poem {
+    position: absolute;
+    right: 160px;
+    font-size: 14px;
+  }
+  
+  .logout {
+    margin-left: 25px;
+    background-color: white;
+    padding: 5px 10px;
+    color: black;
+  }
+  
+  .logout:hover {
+    color: rgba(0, 0, 0, 0.7)
+  }

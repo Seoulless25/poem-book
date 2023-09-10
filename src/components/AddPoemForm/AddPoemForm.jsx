@@ -27,7 +27,16 @@ export default function AddPoemForm({ poems, setPoems, sortOrder }) {
             <div className='form-container'>
                 <form onSubmit={handleSubmit} >
                     <label>Poem</label>
+                    {/* <input type="text" name="title" value={newPoem} onChange={handleChange} required/> */}
                     <input type="text" name="text" value={newPoem} onChange={handleChange} required/>
+                    {/* <select name="Genre">
+                        <option></option>
+                        <option value="Standard">Standard</option>
+                        <option value="Haiku">Haiku</option>
+                        <option value="Prose">Prose</option>
+                        <option value="Free Verse">Free Verse</option>
+                        <option value="Sonnet">Sonnet</option>
+                    </select> */}
                     <button className='submit' type="submit">Add Poem</button>
                 </form>
             </div>
