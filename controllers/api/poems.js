@@ -11,8 +11,9 @@ module.exports = {
 async function create(req, res) {
     try {
         const newPoem = {
-            title: req.body.params,
+            title: req.body.newTitle,
             text: req.body.newPoem,
+            genre: req.body.newGenre,
             user: req.user._id
         };
         const poem = await Poem.create(newPoem);
@@ -42,7 +43,7 @@ async function deletePoem(req, res) {
 
 async function edit(req, res) {
     try {
-        const poem = await Poem.findOneAndUpdate({ _id: req.params.id }, { text: req.body.editPoem }, { new: true});
+        const poem = await Poem.findOneAndUpdate({ _id: req.params.id }, req.body , { new: true });
         res.json(poem);
     }   catch (err) {
         res.status(400).json(err);

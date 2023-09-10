@@ -8,6 +8,11 @@
     border-radius: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    color: black;
+  }
+
+  .form label {
+    color: black;
   }
   
   .poem-container input {
@@ -16,7 +21,7 @@
   
   .poem-date {
     font-size: 10px;
-    color: gray;
+    color: black;
   }
   
   .delete-poem {
@@ -44,6 +49,7 @@
     background-color: white;
     padding: 5px 10px;
     color: black;
+    border-radius: 1.2rem;
   }
   
   .logout:hover {

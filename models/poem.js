@@ -2,12 +2,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const poemSchema = new Schema( {
-    // title: {
-    //     type: String,
-    //     required: true,
-    // },
+    title: {
+        type: String,
+        required: true,
+    },
     text: {
         type: String,
+        required: true,
+    },
+    genre: {
+        type: String,
+        enum: ['Standard', 'Haiku', 'Prose', 'Free Verse', 'Sonnet'],
         required: true,
     },
     user: {

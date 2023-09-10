@@ -4,17 +4,29 @@ import './AddPoemForm.css';
 
 export default function AddPoemForm({ poems, setPoems, sortOrder }) {
     const [newPoem, setNewPoem] = useState('');
+    const [newTitle, setNewTitle] = useState('');
+    const [newGenre, setNewGenre] = useState('');
     const [error, setError] = useState('');
 
-    function handleChange(evt) {
+    function handleChangePoem(evt) {
         setNewPoem(evt.target.value);
+        setError('');
+    }
+
+    function handleChangeTitle(evt) {
+        setNewTitle(evt.target.value);
+        setError('');
+    }
+
+    function handleChangeGenre(evt) {
+        setNewGenre(evt.target.value);
         setError('');
     }
 
     async function handleSubmit(evt) {
         evt.preventDefault();
         try {
-            const poem = await poemsAPI.create(newPoem);
+            const poem = await poemsAPI.create(newPoem, newTitle, newGenre);
             sortOrder === 'asc' ? setPoems([...poems, poem]) : setPoems([poem, ...poems]);
             setNewPoem('');
         }   catch {
@@ -27,16 +39,16 @@ export default function AddPoemForm({ poems, setPoems, sortOrder }) {
             <div className='form-container'>
                 <form onSubmit={handleSubmit} >
                     <label>Poem</label>
-                    {/* <input type="text" name="title" value={newPoem} onChange={handleChange} required/> */}
-                    <input type="text" name="text" value={newPoem} onChange={handleChange} required/>
-                    {/* <select name="Genre">
-                        <option></option>
+                    <input type="text" name="title" value={newTitle} onChange={handleChangeTitle} required/>
+                    <input type="text" name="text" value={newPoem} onChange={handleChangePoem} required/>
+                    <select name="Genre" defaultValue="" onChange={handleChangeGenre} required>
+                        <option disabled value="">-- Select an option --</option>
                         <option value="Standard">Standard</option>
                         <option value="Haiku">Haiku</option>
                         <option value="Prose">Prose</option>
                         <option value="Free Verse">Free Verse</option>
                         <option value="Sonnet">Sonnet</option>
-                    </select> */}
+                    </select>
                     <button className='submit' type="submit">Add Poem</button>
                 </form>
             </div>

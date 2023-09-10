@@ -18,7 +18,7 @@ export default function Poem({ poem, poems, setPoems }) {
         setEditPoem(evt.target.value);
     }
 
-    async function handleEdit(evt) {
+    async function handleEdit() {
         setVisable(!visable);
         const updatedPoem = await poemsAPI.edit(poem._id, editPoem);
         const updatedPoems = poems.map(n => {
@@ -50,7 +50,9 @@ export default function Poem({ poem, poems, setPoems }) {
             }
             { !visable &&
                 <>
+                    <p className='poem-title'>&nbsp;&nbsp;{poem.title}</p>
                     <p className='poem-text'>&nbsp;&nbsp;{poem.text}</p>
+                    <p className='poem-genre'>&nbsp;&nbsp;{poem.genre}</p>
                     <button
                     onClick={toggleInput}
                     className='edit-poem'

@@ -4,7 +4,7 @@ nav {
     background-color: #1C1C1C;
     color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
   }
   

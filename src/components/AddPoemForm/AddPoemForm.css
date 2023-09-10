@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-container {
+    width: 100%;
+}
+
+label {
+    color: black;
+}
+
+button {
+    color: white;
+    background-color: black;
+}
+
+.submit > button {
+    background-color: black;
+}
+

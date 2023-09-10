@@ -6,8 +6,8 @@ export function index() {
     return sendRequest(BASE_URL);
 }
 
-export function create(newPoem) {
-    return sendRequest(BASE_URL, 'POST', { newPoem });
+export function create(newPoem, newTitle, newGenre) {
+    return sendRequest(BASE_URL, 'POST', { newPoem, newTitle, newGenre });
 }
 
 export function deletePoem(id) {
@@ -15,5 +15,6 @@ export function deletePoem(id) {
 }
 
 export function edit(id, editPoem) {
-    return sendRequest(`${BASE_URL}/${id}, 'PUT`, { editPoem });
+    console.log(id, editPoem);
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT', { text: editPoem });
 }
