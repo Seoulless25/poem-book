@@ -51,8 +51,10 @@ export default function Poem({ poem, poems, setPoems }) {
             { !visable &&
                 <>
                     <p className='poem-title'>&nbsp;&nbsp;{poem.title}</p>
-                    <p className='poem-text'>&nbsp;&nbsp;{poem.text}</p>
+                    &nbsp; | &nbsp;
                     <p className='poem-genre'>&nbsp;&nbsp;{poem.genre}</p>
+                    &nbsp; | &nbsp;
+                    <p className='poem-text'>&nbsp;&nbsp;{poem.text}</p>
                     <button
                     onClick={toggleInput}
                     className='edit-poem'

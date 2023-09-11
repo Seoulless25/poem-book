@@ -38,9 +38,14 @@ export default function AddPoemForm({ poems, setPoems, sortOrder }) {
         <div>
             <div className='form-container'>
                 <form onSubmit={handleSubmit} >
-                    <label>Poem</label>
+                    <label>Title</label>
                     <input type="text" name="title" value={newTitle} onChange={handleChangeTitle} required/>
-                    <input type="text" name="text" value={newPoem} onChange={handleChangePoem} required/>
+                    <label>Write your poem</label>
+                    <textarea name="text" value={newPoem} onChange={handleChangePoem} required
+                        rows={7}
+                        cols={40}
+                    />
+                    <label>Genre</label>
                     <select name="Genre" defaultValue="" onChange={handleChangeGenre} required>
                         <option disabled value="">-- Select an option --</option>
                         <option value="Standard">Standard</option>

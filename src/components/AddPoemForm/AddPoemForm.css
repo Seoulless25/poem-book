@@ -2,6 +2,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .form-container {
@@ -17,7 +18,11 @@ button {
     background-color: black;
 }
 
-.submit > button {
+.submit {
     background-color: black;
 }
 
+
+textarea {
+    width: 95%;
+}

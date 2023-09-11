@@ -44,6 +44,7 @@ function HomePage() {
     <div class="shadow">K</div>
   </div>
 </div>
+{/* <div className='sub-title'>Let your creativity rise up~</div> */}
 </>
     </div>
   )
