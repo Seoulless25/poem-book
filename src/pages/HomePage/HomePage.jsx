@@ -37,7 +37,7 @@ function HomePage() {
   </div>
   <div class="wrapper">
     <div id="E" class="letter">E</div>
-    <div class="shadow">O</div>
+    <div class="shadow">E</div>
   </div>
 </div>
 {/* <div className='sub-title'>Let your creativity rise up~</div> */}

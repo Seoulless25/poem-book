@@ -1,5 +1,6 @@
 const User = require('../../models/user');
 const Poem = require('../../models/poem');
+const { UNSAFE_RouteContext } = require('react-router-dom');
 
 module.exports = {
     create,
@@ -25,7 +26,7 @@ async function create(req, res) {
 
 async function index(req, res) {
     try {
-        const poems = await Poem.find({});
+        const poems = await Poem.find({user: req.user._id});
         res.json(poems);
     }   catch (err) {
         res.status(400).json(err);
