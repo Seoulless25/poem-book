@@ -8,40 +8,36 @@ function HomePage() {
       <>
 <div class="overlay"></div><div class="text">
   <div class="wrapper">
-    <div id="P" class="letter">P</div>
-    <div class="shadow">P</div>
+    <div id="L" class="letter">L</div>
+    <div class="shadow">L</div>
   </div>
   <div class="wrapper">
-    <div id="O" class="letter">O</div>
-    <div class="shadow">O</div>
-  </div>
-  <div class="wrapper">
-    <div id="E" class="letter">E</div>
-    <div class="shadow">E</div>
+    <div id="U" class="letter">U</div>
+    <div class="shadow">U</div>
   </div>
   <div class="wrapper">
     <div id="M" class="letter">M</div>
     <div class="shadow">M</div>
   </div>
   <div class="wrapper">
-    <div id="" class="letter"></div>
-    <div class="shadow"></div>
+    <div id="I" class="letter">I</div>
+    <div class="shadow">I</div>
   </div>
   <div class="wrapper">
-    <div id="B" class="letter">B</div>
-    <div class="shadow">B</div>
+    <div id="N" class="letter">N</div>
+    <div class="shadow">N</div>
   </div>
   <div class="wrapper">
-    <div id="O" class="letter">O</div>
+    <div id="A" class="letter">A</div>
+    <div class="shadow">A</div>
+  </div>
+  <div class="wrapper">
+    <div id="T" class="letter">T</div>
+    <div class="shadow">T</div>
+  </div>
+  <div class="wrapper">
+    <div id="E" class="letter">E</div>
     <div class="shadow">O</div>
-  </div>
-  <div class="wrapper">
-    <div id="Otwo" class="letter">O</div>
-    <div class="shadow">O</div>
-  </div>
-  <div class="wrapper">
-    <div id="K" class="letter">K</div>
-    <div class="shadow">K</div>
   </div>
 </div>
 {/* <div className='sub-title'>Let your creativity rise up~</div> */}
