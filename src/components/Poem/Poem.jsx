@@ -42,33 +42,35 @@ export default function Poem({ poem, poems, setPoems }) {
 
     return (
         <div className='poem-container'>
-            <p className='poem-data'>{date.toLocaleString()} &nbsp;- </p>
-            { visable &&
-                <div>
-                    <input onKeyDown={handleKeyPress} value={editPoem}  onChange={handleChange} />
+            <div className='poem-info'>
+                <p className='poem-data'>{date.toLocaleString()} &nbsp; </p>
+                <p className='poem-title'>Title:&nbsp;&nbsp;{poem.title}</p>
+                <p className='poem-genre'>&nbsp;&nbsp;Genre: {poem.genre}</p>
+                { visable &&
+                    <div>
+                        <input onKeyDown={handleKeyPress} value={editPoem}  onChange={handleChange} />
+                    </div>
+                }
+            </div>
+            { !visable &&
+                <div className='poem-content'>
+                    <p className='poem-text'>&nbsp;&nbsp;{poem.text}</p>
                 </div>
             }
-            { !visable &&
-                <>
-                    <p className='poem-title'>&nbsp;&nbsp;{poem.title}</p>
-                    &nbsp; | &nbsp;
-                    <p className='poem-genre'>&nbsp;&nbsp;{poem.genre}</p>
-                    &nbsp; | &nbsp;
-                    <p className='poem-text'>&nbsp;&nbsp;{poem.text}</p>
-                    <button
+            <div className='poem-buttons'>
+             <button
                     onClick={toggleInput}
                     className='edit-poem'
                     >
                     Edit
                     </button>
-                </>
-            }
-            <button
-                className='delete-poem'
-                onClick={handleDelete}
-            >
-            Delete
-            </button>
+                <button
+                    className='delete-poem'
+                    onClick={handleDelete}
+                 >
+                    Delete
+                     </button>
+            </div>
         </div>
-    );
-}
+    )
+};
