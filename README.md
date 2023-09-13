@@ -1,4 +1,4 @@
-# LUMINATE
+# ILLUMINATE
 
 With this project, I wanted to have a way to more easily keep my thoughts and writings in one place. Life is difficult and we never know what could be coming next around the corner. Writing for me has always been about working through personal struggles and expressing myself in ways that I might not always get to do verbally. It's a release from the daily routine and allows me to explore and shine light on things that I may have previously skipped over or pushed on the back burner. 
 
