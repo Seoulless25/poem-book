@@ -7,6 +7,14 @@ function HomePage() {
     <div className={styles.container}>
       <>
 <div class="overlay"></div><div class="text">
+   <div class="wrapper">
+    <div id="I" class="letter">I</div>
+    <div class="shadow">I</div>
+  </div>
+   <div class="wrapper">
+    <div id="Ltwo" class="letter">L</div>
+    <div class="shadow">L</div>
+  </div>
   <div class="wrapper">
     <div id="L" class="letter">L</div>
     <div class="shadow">L</div>
